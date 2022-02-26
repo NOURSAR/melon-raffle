@@ -98,3 +98,26 @@ Justin Brown|elit@et.ca|209-2456 Vulputate, St.|Lake Cowichan|48622
 Paloma Carlson|eu@aliquam.co.uk|414-2799 Risus. Avenue|Cumberland|74357
 Linus Hodge|Nunc.ut@Nuncullamcorpervelit.co.uk|824-6912 Cubilia Rd.|Manfredonia|37815
 Reed Johnston|Aliquam@eget.edu|Ap #534-1110 Proin Street|Canmore|51408
+
+
+
+def customers_file_info(file):
+    ''' Open file '''
+    customers_file = open(file)
+    
+
+
+    customers =[]
+    for line in customers_file:
+        line = line.strip().split('|')
+        name = line[0]
+        email= line[1]
+        street = line[2]
+        city = line[3]
+        zip_code = line[4]
+
+        customer = [name , email, street, city,zip_code]
+        customers.append(customer)
+
+    return customers
+    customers_file.close()
